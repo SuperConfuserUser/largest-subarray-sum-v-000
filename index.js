@@ -19,7 +19,7 @@ function largestSubarraySum(array) {
     currSum++;
     
     if (currSum > maxSum) maxSum = currSum;
-    if (currSum < maxSum) currSum = 0;
+    if (currSum < 0) currSum = 0;
   })
   
   return maxSum;
