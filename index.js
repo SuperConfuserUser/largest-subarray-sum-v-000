@@ -16,8 +16,7 @@ function largestSubarraySum(array) {
   let currSum = 0;
   
   array.forEach(n => {
-    currSum++;
-    
+    currSum += n;
     if (currSum > maxSum) maxSum = currSum;
     if (currSum < 0) currSum = 0;
   })
