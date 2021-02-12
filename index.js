@@ -12,5 +12,15 @@
 // }
 
 function largestSubarraySum(array) {
+  let maxSum = 0;
+  let currSum = 0;
   
+  array.forEach(n => {
+    currSum++;
+    
+    if (currSum > maxSum) maxSum = currSum;
+    if (currSum < maxSum) currSum = 0;
+  })
+  
+  return maxSum;
 }
